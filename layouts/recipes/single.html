@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<section>
+    <header class="main">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="row">
+        <div class="col-4 col-12-small">
+            <h2>Ingredients</h2>
+            <ul class="alt">
+                {{ range $index, $elm := .Params.ingredients }}
+                <li>
+                    <input
+                        type="checkbox"
+                        id="ing-{{ $index }}"
+                        name="ing-{{ $index }}"
+                    ><label for="ing-{{ $index }}">{{ $elm }}</label>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="col-8 col-12-small">
+            <div class="clearfix">
+            {{ $original := .Resources.GetMatch "hero.*" }}
+            <img class="image right" src="{{ ($original.Resize "600x").Permalink }}" alt="{{ .Title }}" />
+            {{ .Content }}
+            </div>
+
+            <h2>Method</h2>
+            {{ range $index, $elm := .Params.method }}
+                <h3>Step {{ add $index 1 }}</h3>
+                <p>{{ $elm }}</p>
+            {{ end }}
+
+            <p>Original recipe from <a href="{{ .Params.original.url }}">{{ .Params.original.host }}</a></p>
+        </div>
+    </div>
+</section>
+{{ end }}

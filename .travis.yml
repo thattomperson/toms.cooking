@@ -1,0 +1,21 @@
+dist: xenial
+language: generic
+addons:
+  snaps:
+  - name: hugo
+    channel: extended
+script:
+- hugo --minify
+deploy:
+  provider: pages
+  local-dir: public
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  fqdn: food.ttp.sh
+  keep-history: true
+  on:
+    branch: master
+    
+env:
+  global:
+    secure: fEOsZlKIbdANZkfmCpTTM1SdHuKdVruPVwLIOYysnRZAS3NolRAleZvJMYjdevmQgNEk2Fbvj5ZMUYSRGvqmEZnWBU9EmEObIqEeC31ByoGlX/VVONeXJvDm9wt7IGtjCH3GuoCHbqGuDoUzNFXJHsFxZxYmDjXPOFYrZX6ifCpOWOUUzP9nilNV3BWEpclUgMjUIW5w/PP+ZiCqGcqgar+VfLSQGjA8ofzapWgrNhjqklyt3pQkHpNzbLuG5RvuKAqoFxXT8Gw2I0aR13zjeTUIFO+YZxugs6mGnH7hj+T/w1K9HFPatqxpiedD6Wjyc7wlEl54a/kAekP5s/fEX/7BDsks6hZHmR97QHFmqf+rJkyFZacil/39UMqGGgfkMRdbXGuRQ/EUOJhGC3FIm44/ch+wnzpJ7x0MVrzWYxSXQcxuEr8C23E8H4HPf1PAC4Ho6FV7J2JCq4fonXYm+wNDOKXu/TKrcrifPz3vczRc1qZDJ3JynCKgqsQAN9CKXalxKhCk7i6EoNn2FmVqRuY2co44ZPcQai4qaayGEYAio96WXm27F8XAlOXOFy8KNeT9KBQiwypbOqU8IZtSlbLY4DnIc0t3zSv6FZ9U20SQpYOHY5H7X1EeE0zAVhZTFnn6zAofXxy5Jyweul1VSZo8gx5CBsSJa0uaHLJM3j8=

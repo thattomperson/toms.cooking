@@ -3,4 +3,7 @@ languageCode = "en-au"
 title = "Tom's Cooking"
 
 [permalinks]
-  recipies = "/:title/"
+recipes = "/:title/"
+
+[outputs]
+home = [ "html", "rss", "json"]

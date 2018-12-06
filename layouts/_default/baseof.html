@@ -9,8 +9,35 @@
     {{- else -}}
     <title>{{ .Site.Title }} {{ .Page.Title }}</title>
     {{ end -}}
+
+    {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{ else if .IsPage }}
+    <meta name="description" content="{{ .Summary | plainify }}">
+    {{ end }}
+
+    {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
-<body>
-    {{ block "main" . }}{{ end }}
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header class="header">
+                    <a href="/" class="logo"><strong>Tom's</strong> Cooking</a>
+                    {{/* <a class="button">Test</a> */}}
+                    {{/* <ul class="icons">
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+                    </ul> */}}
+                </header>
+                {{ block "main" . }}{{ end }}
+            </div>
+        </div>
+        {{ partial "sidebar" . }}
+    </div>
 </body>
 </html>

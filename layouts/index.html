@@ -1,5 +1,43 @@
 {{ define "main" }}
-
-<h1>Hello</h1>
+<section id="banner">
+    <div class="content">
+        <header>
+            <h1>Hi, I’m Tom</h1>
+            <p>And I love cooking and eating</p>
+        </header>
+        <p>
+            So here is a curated list of all my favourite recipes, check out some of the <a href="/tags/vegetarian/">Vegetarian</a>, or <a href="/tags/healthy">Healthy</a> recipes!
+        </p>
+        {{/* <ul class="actions">
+            <li><a href="#" class="button big">Learn More</a></li>
+        </ul> */}}
+    </div>
+    <span class="image object">
+        <img src="/images/hero.jpg" alt="" />
+    </span>
+</section>
+<section>
+    <header>
+        <div class="header minor"> 
+            <h2>Newest Recipes</h2>
+            <a class="button" href="/recipes">View All</a>
+        </div>
+    </header>
+    <div class="posts">
+        {{ range $index, $page := first 6 (where .Data.Pages "Section" "recipes") }}
+        <article>
+            <a href="{{ $page.Permalink }}" class="image">
+                {{ $original := $page.Resources.GetMatch "hero.*" }}
+                <img src="{{ ($original.Resize "600x").Permalink }}" alt="{{ $page.Title }}" />
+            </a>
+            <h3>{{ $page.Title }}</h3>
+            <p>{{ $page.Summary }}</p>
+            <ul class="actions">
+                <li><a href="{{ $page.Permalink }}" class="button">View</a></li>
+            </ul>
+        </article>
+        {{ end }}
+    </div>
+</section>
 
 {{ end }}
