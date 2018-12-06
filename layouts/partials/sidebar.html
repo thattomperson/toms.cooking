@@ -15,7 +15,17 @@
                 </header>
                 <ul>
                     <li><a href="/">Homepage</a></li>
-                    <li><a href="/recipes">Recipes</a></li>
+                    <li>
+                        <span class="opener">Recipes</span>
+                        <ul>
+                            <li><a href="/recipes">All Recipes</a></li>
+                            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                                {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                                <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
