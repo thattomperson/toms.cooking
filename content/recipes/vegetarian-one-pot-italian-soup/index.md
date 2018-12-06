@@ -37,4 +37,3 @@ A one-pot Italian Soup with a bunch of seasonal Italian ingredients to feed the 
 
 Like any good one-pot meal, the key is to prep all your ingredients at once. In this recipe, Guy talks about soaking your grains ahead of time to wash away impurities and start the breakdown of enzymes to give you a beautiful, al dente mouthfeel to your soup.
 
-

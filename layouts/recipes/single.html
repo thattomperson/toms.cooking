@@ -2,7 +2,9 @@
 
 <section>
     <header class="main">
-        <h1>{{ .Title }}</h1>
+        <h1>{{ .Title }}
+            <a href="https://github.com/thattomperson/toms.cooking" class="icon fa-pull-right fa-heart-o"></a>
+        </h1>
     </header>
     <div class="row">
         <div class="col-4 col-12-small">
@@ -21,13 +23,15 @@
         </div>
         <div class="col-8 col-12-small">
             <div class="clearfix">
+
                 {{ $original := .Resources.GetMatch "hero.*" }}
                 {{ if $original }}
                     <div class="right image">
                         <img src="{{ ($original.Resize "600x").Permalink }}" alt="{{ .Title }}" />
                     </div>
                 {{ end }}
-            {{ .Content }}
+
+                {{ .Content }}
             </div>
 
             <h2>Method</h2>
