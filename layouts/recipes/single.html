@@ -21,8 +21,12 @@
         </div>
         <div class="col-8 col-12-small">
             <div class="clearfix">
-            {{ $original := .Resources.GetMatch "hero.*" }}
-            <img class="image right" src="{{ ($original.Resize "600x").Permalink }}" alt="{{ .Title }}" />
+                {{ $original := .Resources.GetMatch "hero.*" }}
+                {{ if $original }}
+                    <div class="right image">
+                        <img src="{{ ($original.Resize "600x").Permalink }}" alt="{{ .Title }}" />
+                    </div>
+                {{ end }}
             {{ .Content }}
             </div>
 
