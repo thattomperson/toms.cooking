@@ -1,4 +1,4 @@
-baseURL = "https://food.ttp.sh/"
+baseURL = "http://food.ttp.sh/"
 languageCode = "en-au"
 title = "Tom's Cooking"
 

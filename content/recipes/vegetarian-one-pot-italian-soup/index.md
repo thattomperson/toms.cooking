@@ -5,6 +5,7 @@ tags: ["Vegetarian", "Italian", "Soup", "Healthy"]
 original: 
     host: Bondi Harvest
     url: https://bondiharvest.com/portfolio/vegetarian-one-pot-italian-soup/
+youtube: tBStLdLCMrU
 ingredients:
     - 1 Onion diced
     - 1 bulb garlic sliced fine
