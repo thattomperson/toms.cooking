@@ -2,6 +2,16 @@ baseURL = "https://food.ttp.sh/"
 languageCode = "en-au"
 title = "Tom's Cooking"
 
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [permalinks]
 recipes = "/:title/"
 
