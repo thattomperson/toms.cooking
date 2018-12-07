@@ -18,6 +18,10 @@
 
     {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-7784427690889827"});
+    </script>
 </head>
 <body class="is-preload">
     <div id="wrapper">
@@ -40,13 +44,6 @@
     </div>
 
     <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37849/adRecover.js?ts=1544092778606'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-7784427690889827",
-        enable_page_level_ads: true
-    });
-    </script>
     {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.Permalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
 
