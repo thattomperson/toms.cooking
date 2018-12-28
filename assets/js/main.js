@@ -50,25 +50,25 @@
      ui.start(c, uiConfig);
   })
 
-  console.log('binding')
-  var pjaxContainer = $('.pjax')
+  // console.log('binding')
+  // var pjaxContainer = $('.pjax')
 
-  $('body').on('click', 'a[pjax]', function (e) {
-    e.preventDefault()
-    var url = this.href
-    console.log('getting ' + url)
-    var req = $.get(url)
+  // $('body').on('click', 'a[pjax]', function (e) {
+  //   e.preventDefault()
+  //   var url = this.href
+  //   console.log('getting ' + url)
+  //   var req = $.get(url)
 
-    req.always(function (res) {
-      var html = document.createElement('html')
-      html.innerHTML = res;
+  //   req.always(function (res) {
+  //     var html = document.createElement('html')
+  //     html.innerHTML = res;
 
-      content = html.querySelector('.pjax')
-      title = html.querySelector('title')
+  //     content = html.querySelector('.pjax')
+  //     title = html.querySelector('title')
 
-      window.history.pushState({}, title.innerText, url)
+  //     window.history.pushState({}, title.innerText, url)
       
-      pjaxContainer.html(content.innerHTML)
-    })
-  })
+  //     pjaxContainer.html(content.innerHTML)
+  //   })
+  // })
 })(jQuery, firebase);
