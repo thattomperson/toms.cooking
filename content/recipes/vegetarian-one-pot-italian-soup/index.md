@@ -6,23 +6,24 @@ original:
     host: Bondi Harvest
     url: https://bondiharvest.com/portfolio/vegetarian-one-pot-italian-soup/
 youtube: tBStLdLCMrU
+description: A one-pot Italian Soup with a bunch of seasonal Italian ingredients to feed the whole family.
 ingredients:
     - 1 Onion diced
-    - 1 bulb garlic sliced fine
-    - 1 chilli sliced
-    - 2 sticks celery diced
-    - 2 tsp fennel seeds
-    - 3 bayleaf
-    - 2 sprigs thyme
-    - 1 litre chicken or vegetable stock
-    - 2 tsp tomato paste
-    - 4 tomatoes quartered and squeezed
-    - 1 carrot peeled and chopped into shapes
-    - 1 zucchini cut into discs
-    - 1 cup grains (buckwheat, lentils or rice) soaked
-    - 3 tbsp olive oil
-    - 200 grams parmesan cheese
-    - basil
+    - 1 Bulb garlic sliced fine
+    - 1 Chilli sliced
+    - 2 Sticks celery diced
+    - 2 Tsp fennel seeds
+    - 3 Bayleaf
+    - 2 Sprigs thyme
+    - 1 Litre chicken or vegetable stock
+    - 2 Tsp tomato paste
+    - 4 Tomatoes quartered and squeezed
+    - 1 Carrot peeled and chopped into shapes
+    - 1 Zucchini cut into discs
+    - 1 Cup grains (buckwheat, lentils or rice) soaked
+    - 3 Tbsp olive oil
+    - 200 Grams parmesan cheese
+    - Basil
 method:
 - The first step to any quick and great one-pot meal is to do all of your preparations before you start cooking. So chop your ingredients, measure the stock and get yourself ready to cook!
 - Place the pot on the stove at medium heat, add olive oil then onion, garlic, chili, and celery, and cook until tender and colored (10 minutes).

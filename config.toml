@@ -1,6 +1,9 @@
-baseURL = "https://food.ttp.sh/"
+# baseURL = "https://food.ttp.sh/"
+baseURL = "http://localhost:8080/"
 languageCode = "en-au"
+
 title = "Tom's Cooking"
+paginate = 12
 
 [privacy]
   [privacy.googleAnalytics]

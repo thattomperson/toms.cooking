@@ -6,7 +6,8 @@
             <p>And I love cooking and eating</p>
         </header>
         <p>
-            So here is a curated list of all my favourite recipes, check out some of the <a href="/tags/vegetarian/">Vegetarian</a>, or <a href="/tags/healthy">Healthy</a> recipes!
+
+            So here is a curated list of all my favourite recipes, check out some of the <a pjax href="/tags/vegetarian/">Vegetarian</a>, or <a pjax href="/tags/healthy">Healthy</a> recipes!
         </p>
         {{/* <ul class="actions">
             <li><a href="#" class="button big">Learn More</a></li>
@@ -28,7 +29,10 @@
         <article>
             <a href="{{ $page.Permalink }}" class="image">
                 {{ $original := $page.Resources.GetMatch "hero.*" }}
-                <img src="{{ ($original.Resize "600x").Permalink }}" alt="{{ $page.Title }}" />
+                {{ with $original }}
+                <img src="{{ (.Resize "600x").Permalink }}" alt="{{ $page.Title }}" />
+                {{ end }}
+
             </a>
             <h3>{{ $page.Title }}</h3>
             <p>{{ $page.Summary }}</p>

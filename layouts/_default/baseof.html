@@ -18,12 +18,15 @@
 
     {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-7784427690889827"});
     </script>
 </head>
 <body class="is-preload">
+    <div id="firebaseui-auth-container"></div>
     <div id="wrapper">
         <div id="main">
             <div class="inner">
@@ -37,7 +40,9 @@
                         <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li> */}}
                     </ul>
                 </header>
+                <div class="pjax">
                 {{ block "main" . }}{{ end }}
+                </div>
             </div>
         </div>
         {{ partial "sidebar" . }}
@@ -47,7 +52,27 @@
     {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.Permalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
 
-    {{ $script := slice (resources.Get "js/util.js") (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}
+    {{ $script := slice (resources.Get "js/util.js") (resources.Get "js/theme.js") | resources.Concat "js/theme.js" | minify | fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB5S0AjZYGfe8lHKEVWcyUkJyuO0H-zX-E",
+        authDomain: "toms-cooking.firebaseapp.com",
+        databaseURL: "https://toms-cooking.firebaseio.com",
+        projectId: "toms-cooking",
+        storageBucket: "toms-cooking.appspot.com",
+        messagingSenderId: "775892925094"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
+    
+    
+
+    {{ $script := slice (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 </body>
 </html>

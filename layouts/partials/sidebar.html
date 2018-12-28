@@ -14,14 +14,22 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="/">Homepage</a></li>
+                    <li><a pjax href="/">Homepage</a></li>
                     <li>
-                        <span class="opener">Recipes</span>
+                        <span class="opener">My Recipes</span>
                         <ul>
-                            <li><a href="/recipes">All Recipes</a></li>
+                            <li><a class="js-user-signed-in">Favorites</a>
+                            <li><a class="js-user-signed-in js-sign-out">Sign out</a></li>
+                            <li><a class="js-user-anon js-sign-in">Sign in</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener active">Recipes</span>
+                        <ul>
+                            <li><a pjax href="/recipes">All Recipes</a></li>
                             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
                                 {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-                                <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                                <li><a pjax href="{{ .Permalink }}">{{ $name }}</a></li>
                                 {{ end }}
                             {{ end }}
                         </ul>
@@ -30,6 +38,7 @@
             </nav>
 
         <!-- Section -->
+
             {{/* <section>
                 <header class="major">
                     <h2>Sponsored Content</h2>
@@ -64,6 +73,20 @@
                 </ul>
             </section> */}}
 
+            <section>
+                <header class="major">
+                    <h2>FAQ</h2>
+                </header>
+                <p>
+                    {{ $host := .Page.Params.original.host }}
+                    {{ if $host }}
+                    <b>Hey, You stole this recipe from {{ $host }}!</b>
+                    {{ else }}
+                    <b>Hey, You stole this recipe from someone!</b>
+                    {{- end }}
+                    <br>Yeah probably, I give credit at the bottom of every recipe, sometimes I make small changes too.
+                </p>
+            </section>
         <!-- Footer -->
             <footer id="footer">
                 <p class="copyright">&copy; Tom's Cooking. All rights reserved.<br>Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
