@@ -1,5 +1,5 @@
-# baseURL = "https://food.ttp.sh/"
-baseURL = "http://localhost:8080/"
+baseURL = "https://food.ttp.sh/"
+# baseURL = "http://localhost:8080/"
 languageCode = "en-au"
 
 title = "Tom's Cooking"
