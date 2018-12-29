@@ -19,6 +19,9 @@
     {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
+    {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet" media="print" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>

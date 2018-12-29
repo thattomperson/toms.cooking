@@ -4,9 +4,10 @@
     <header class="main">
         <h1>{{ .Title }}
             <a href="#heart" class="icon fa-pull-right fa-heart-o"></a>
+            <a href="javascript:window.print()" class="icon fa-pull-right fa-print"></a>
         </h1>
     </header>
-    <div class="row">
+    <div class="row recipe">
         <div class="col-4 col-12-small">
             <h2>Ingredients</h2>
             <ul class="alt">
@@ -22,8 +23,7 @@
             </ul>
         </div>
         <div class="col-8 col-12-small">
-            <div class="clearfix">
-
+            <div class="clearfix intro">
                 {{ $original := .Resources.GetMatch "hero.*" }}
                 {{ if $original }}
                     <div class="right image">

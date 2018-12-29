@@ -10,7 +10,6 @@
     } else {
       $('.js-user-signed-in').hide()
       $('.js-user-anon').show()
-
     }
   })
 
