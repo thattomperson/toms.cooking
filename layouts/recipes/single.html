@@ -6,6 +6,13 @@
             <a href="#heart" class="icon fa-pull-right fa-heart-o"></a>
             <a href="javascript:window.print()" class="icon fa-pull-right fa-print"></a>
         </h1>
+        <ul class="tags">
+        {{ range $name := .Params.tags }}
+            {{ with $.Site.GetPage (printf "/tags/%s" ($name | lower)) }}
+            <li><a href="{{ .Permalink }}" class="button">{{ $name }}</a></li>
+            {{ end }}
+        {{ end }}
+        </ul>
     </header>
     <div class="row recipe">
         <div class="col-4 col-12-small">
@@ -39,8 +46,9 @@
                 <h3>Step {{ add $index 1 }}</h3>
                 <p>{{ $elm }}</p>
             {{ end }}
-
+            {{ if .Params.original }}
             <p>Original recipe from <a href="{{ .Params.original.url }}">{{ .Params.original.host }}</a></p>
+            {{ end }}
         </div>
     </div>
 </section>
