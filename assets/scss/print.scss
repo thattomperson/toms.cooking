@@ -50,3 +50,8 @@ a[href^=http]::after {
     content: ' [' attr(href) ']';
     font-size: 80%;
 }
+
+ul.tags, ul.actions {
+    display: none;
+}
+
