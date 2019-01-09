@@ -5,7 +5,7 @@ tags:
 - Vegetarian
 - Simple
 - Baking
-- Biscits
+- Biscuits
 ingredients:
 - 500g almond meal
 - 400g caster sugar
@@ -17,4 +17,4 @@ method:
 - Roll 2 teaspoonfuls of the mixture into balls. Place on the trays.
 - Bake for 15-18 minutes or until light golden. Set aside to cool slightly on the trays before transferring to a wire rack to cool completely.
 ---
-Tastey little Itallian maccarons, perfect for entertaining guests or with a cup of coffee in the afternoon
+Tastey little Itallian macaroons, perfect for entertaining guests or with a cup of coffee in the afternoon
