@@ -19,13 +19,29 @@
             <h2>Ingredients</h2>
             <ul class="alt">
                 {{ range $index, $elm := .Params.ingredients }}
-                <li>
-                    <input
-                        type="checkbox"
-                        id="i-{{ $index }}"
-                        name="i-{{ $index }}"
-                    ><label for="i-{{ $index }}">{{ $elm }}</label>
-                </li>
+                    
+                    {{ if eq (printf "%T" $elm) "string" }}
+                        <li>
+                            <input
+                                type="checkbox"
+                                id="i-{{ $index }}"
+                                name="i-{{ $index }}"
+                            ><label for="i-{{ $index }}">{{ $elm }}</label>
+                        </li>
+                    {{ else }}
+                        {{ range $name, $ings :=  $elm }}
+                            {{ if not (eq $name "Default") }} <h3>{{ $name }}</h3> {{ end }}
+                            {{ range $iindex, $ing := $ings }}
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="i-{{ $index }}"
+                                    name="i-{{ $index }}"
+                                ><label for="i-{{ $index }}">{{ $ing }}</label>
+                            </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
                 {{ end }}
             </ul>
         </div>
@@ -43,8 +59,20 @@
 
             <h2>Method</h2>
             {{ range $index, $elm := .Params.method }}
-                <h3>Step {{ add $index 1 }}</h3>
-                <p>{{ $elm }}</p>
+                {{ if eq (printf "%T" $elm) "string" }}
+                    <h4>Step {{ add $index 1 }}</h4>
+                    <p>{{ $elm }}</p>
+                {{ else }}
+                    {{ range $name, $steps :=  $elm }}
+                        {{ if not (eq $name "Default") }} <h3>{{ $name }}</h3> {{ end }}
+                        <div style="padding-left: 10px;">
+                        {{ range $index, $elm := $steps }}
+                            <h4>Step {{ add $index 1 }}</h4>
+                            <p>{{ $elm }}</p>
+                        {{ end }}
+                        </div>
+                    {{ end }}
+                {{ end }}
             {{ end }}
             {{ if .Params.original }}
             <p>Original recipe from <a href="{{ .Params.original.url }}">{{ .Params.original.host }}</a></p>
