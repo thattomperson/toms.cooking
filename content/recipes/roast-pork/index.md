@@ -2,10 +2,8 @@
 title: Roast Pork
 date: 2019-01-08T12:08:50+10:30
 tags:
-    - Vegetarian
     - Simple
-    - Baking
-    - Biscuits
+    - Roast
 ingredients:
     - Default:
     - 2kg leg of lamb, fat trimmed
