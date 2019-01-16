@@ -1,5 +1,33 @@
 @import 'main';
 
+#query.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.results {
+    position: absolute;
+    width: 100%;
+}
+
+.results.active {
+    border: 1px solid #f56a6a;
+    box-shadow: 0 0 0 1px #f56a6a;
+    border-top: none;
+    border-bottom-left-radius: .375em;
+    border-bottom-right-radius: .375em;
+    background: #fff;
+    z-index: 999;
+    list-style: none;
+}
+
+.results.active li {
+    display: block;
+    line-height: 2em;
+    font-size: 11pt;
+    border-top:1px solid #f5f6f7;
+}
+
 
 // body::before {
 //     content: "max";

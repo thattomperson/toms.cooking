@@ -71,7 +71,8 @@
     firebase.initializeApp(config);
     </script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js"></script>
+    <script src="https://unpkg.com/mithril/mithril.js"></script>
     {{ $script := slice (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 </body>
