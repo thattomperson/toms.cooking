@@ -1,14 +1,10 @@
-[{{ range $index, $page := .Site.Pages }}
-    {{- if ne $page.Type "json" -}}
-    {{- if ne $page.Title "categories" -}}
-    {{- if and $index (gt $index 0) -}},{{- end }}
-    {
-        "uri": "{{ $page.Permalink }}",
-        "title": {{ $page.Title | jsonify }},
-        "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}{{ $tag | jsonify }}{{ end }}],
-        "description": {{ $page.Description | jsonify }},
-        "content": {{ $page.Plain | jsonify }}
-    }
-    {{- end -}}
-    {{- end -}}
+[{{- range $index, $page := where .Data.Pages "Section" "recipes" -}}
+{{- if and $index (gt $index 0) -}},{{- end -}}
+{
+    "uri": "{{ $page.Permalink }}",
+    "title": {{ $page.Title | jsonify }},
+    "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}{{ $tag | jsonify }}{{ end }}],
+    "description": {{ $page.Description | jsonify }},
+    "content": {{ $page.Plain | jsonify }}
+}
 {{- end -}}]
