@@ -5,23 +5,7 @@
             <h2>All Recipes</h2>
         </div>
         </header>
-        <div class="posts">
-            {{ range $page := .Paginator.Pages }}
-            <article>
-                <a href="{{ $page.Permalink }}" class="image">
-                {{ $original := $page.Resources.GetMatch "hero.*" }}
-                {{ with $original }}
-                <img src="{{ (.Resize "600x").Permalink }}" alt="{{ $page.Title }}" />
-                {{ end }}
-                </a>
-                <h3>{{ $page.Title }}</h3>
-                <p>{{ $page.Summary }}</p>
-                <ul class="actions">
-                    <li><a href="{{ $page.Permalink }}" class="button">View</a></li>
-                </ul>
-            </article>
-            {{ end }}
-        </div>
+        {{ partial "recipe-cards" .Paginator.Pages }}
         <div class="col-12">
             {{ partial "pagination" . }}
         </div>

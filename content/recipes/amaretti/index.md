@@ -6,6 +6,7 @@ tags:
 - Simple
 - Baking
 - Biscuits
+- Gluten-Free
 ingredients:
 - 500g almond meal
 - 400g caster sugar
