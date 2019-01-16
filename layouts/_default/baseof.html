@@ -16,7 +16,7 @@
     <meta name="description" content="{{ .Summary | plainify }}">
     {{ end }}
 
-    {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
+    {{ $style := resources.Get "scss/new.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
     {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
@@ -51,7 +51,6 @@
         {{ partial "sidebar" . }}
     </div>
 
-    <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37849/adRecover.js?ts=1544092778606'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
     {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.Permalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
 
@@ -72,8 +71,6 @@
     firebase.initializeApp(config);
     </script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
-    
-    
 
     {{ $script := slice (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>

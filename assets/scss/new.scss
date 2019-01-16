@@ -1,0 +1,33 @@
+@import 'main';
+
+
+// body::before {
+//     content: "max";
+//     position: fixed;
+//     display: block;
+//     top: 0;
+//     left: 0;
+//     background: black;
+//     color:white;
+//     z-index: 9999999999;    
+
+//     @include breakpoint('<=xlarge') {
+//         content: "xlarge";
+//     }
+//     @include breakpoint('<=large') {
+//         content: "large";
+//     }
+//     @include breakpoint('<=medium') {
+//         content: "medium";
+//     }
+//     @include breakpoint('<=small') {
+//         content: "small";
+//     }
+//     @include breakpoint('<=xsmall') {
+//         content: "xsmall";
+//     }
+//     @include breakpoint('<=xxsmall') {
+//         content: "xxsmall";
+//     }
+// }
+
