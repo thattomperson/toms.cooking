@@ -10,7 +10,7 @@ original:
     host: Binging With Babish
     url: https://www.bingingwithbabish.com/recipes/2017/5/4/aglioeolio
 youtube: bJUiWdM__Qw
-description: Simple and fast pasta with garlic, oil, and a touch of chili
+description: Pasta, Oil, and Garlic
 ingredients:
     - 1/2 head garlic, separated and peeled
     - 1/2 cup flat-leaf parsley, rinsed and finely chopped

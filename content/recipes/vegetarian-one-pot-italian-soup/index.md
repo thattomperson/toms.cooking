@@ -10,7 +10,7 @@ original:
     host: Bondi Harvest
     url: https://bondiharvest.com/portfolio/vegetarian-one-pot-italian-soup/
 youtube: tBStLdLCMrU
-description: A one-pot Italian Soup with a bunch of seasonal Italian ingredients to feed the whole family.
+description: Perfect for winter
 ingredients:
     - 1 Onion diced
     - 1 Bulb garlic sliced fine

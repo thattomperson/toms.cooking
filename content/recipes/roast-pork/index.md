@@ -4,6 +4,7 @@ date: 2019-01-08T12:08:50+10:30
 tags:
     - Simple
     - Roast
+description: Yum, Pork!
 ingredients:
     - Default:
     - 2kg leg of lamb, fat trimmed

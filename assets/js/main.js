@@ -95,7 +95,11 @@ var options = {
 function Results() {
   function result(res) {
     return m('li', [
-      m('a', {href: res.uri}, [res.title])
+      m('a', {href: res.uri}, [
+        m('img', {src: res.image}),
+        m('h3', res.title),
+        m('span', res.description)
+      ])
     ])
   }
 
@@ -127,8 +131,8 @@ function Search() {
     console.log('onblur')
     
     setTimeout(() => {
-      oninput({target: {value: ''}})
-      m.redraw()
+      // oninput({target: {value: ''}})
+      // m.redraw()
     }, 1000)
   }
 

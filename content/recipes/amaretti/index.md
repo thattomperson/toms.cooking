@@ -7,6 +7,7 @@ tags:
 - Baking
 - Biscuits
 - Gluten-Free
+description: Italian macaroons
 ingredients:
 - 500g almond meal
 - 400g caster sugar

@@ -10,6 +10,7 @@ tags:
 original: 
     host: Yup It's Vegan
     url: https://yupitsvegan.com/easy-coconut-chickpea-curry/
+description: Vegan chickpea curry
 ingredients:
 - 1 tbsp coconut oil
 - 1 large red onion thinly sliced
