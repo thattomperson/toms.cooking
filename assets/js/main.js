@@ -93,7 +93,6 @@ var options = {
 
 
 function Results() {
-
   function result(res) {
     return m('li', [
       m('a', {href: res.uri}, [res.title])
@@ -140,7 +139,7 @@ function Search() {
         .then(list => fuse = new Fuse(list, options))
     },
     view: () => (m('form', [
-      m('input', { oninput, onblur, onfocus: oninput, type: 'text', id: 'query', class: results.length ? 'active' : '', placeholder: 'Search'}),
+      m('input', { oninput, onblur, onfocus: oninput,  autocomplete: 'off', type: 'text', id: 'query', class: results.length ? 'active' : '', placeholder: 'Search'}),
       m(Results, { results })
     ]))
   }
