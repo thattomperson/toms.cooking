@@ -53,19 +53,14 @@
 		}
 	
 		@include breakpoint('>=large') {
-			& {
-				border-left-width: 1px;	
-			}
-			&:nth-child(even) {
-				border-left-width: 1px;
+			border-left-width: 1px;
+			
+			&:nth-child(3n + 1) {
+				border-left-width: 0;
 			}
 			&:nth-child(3) {
 				padding-top: 0;
 				border-top-width: 0;
-			}
-
-			&:nth-child(3n + 1) {
-				border-left-width: 0;
 			}
 		}
 	}
