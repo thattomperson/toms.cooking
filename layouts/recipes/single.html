@@ -9,7 +9,7 @@
         <ul class="tags">
         {{ range $name := .Params.tags }}
             {{ with $.Site.GetPage (printf "/tags/%s" ($name | lower)) }}
-            <li><a href="{{ .Permalink }}" class="button">{{ $name }}</a></li>
+            <li><a href="{{ .Permalink }}" class="button">{{ .Title }}</a></li>
             {{ end }}
         {{ end }}
         </ul>
