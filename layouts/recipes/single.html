@@ -55,6 +55,16 @@
                 {{ end }}
 
                 {{ .Content }}
+
+                <div style="display: flex; justify-content: space-between">
+                    {{ if .Params.makes }}
+                        <span><i class="fa fa-cutlery" aria-hidden="true"></i> Makes: {{ .Params.makes }}</span>
+                    {{ end }}
+                    
+                    {{ range $times := .Params.times}}{{ range $type, $time := $times }}
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $type | title }}: {{ $time }}</span>
+                    {{ end }}{{ end }}
+                </div>
             </div>
 
             <h2>Method</h2>
@@ -75,7 +85,7 @@
                 {{ end }}
             {{ end }}
             {{ if .Params.original }}
-            <p>Original recipe from <a href="{{ .Params.original.url }}">{{ .Params.original.host }}</a></p>
+            <p>Original recipe from <a target="_blank" href="{{ .Params.original.url }}">{{ .Params.original.host }}</a></p>
             {{ end }}
         </div>
     </div>

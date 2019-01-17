@@ -11,6 +11,12 @@ original:
     host: Yup It's Vegan
     url: https://yupitsvegan.com/easy-coconut-chickpea-curry/
 description: Vegan chickpea curry
+
+makes: 4 servings
+times:
+- prep: 10m
+- cook: 30m
+
 ingredients:
 - 1 tbsp coconut oil
 - 1 large red onion thinly sliced
