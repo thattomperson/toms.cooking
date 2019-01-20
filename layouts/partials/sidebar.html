@@ -15,12 +15,10 @@
                 </header>
                 <ul>
                     <li><a pjax href="/">Homepage</a></li>
-                    <li>
+                    <li id="auth-cont">
                         <span class="opener">My Recipes</span>
                         <ul>
-                            <li><a class="js-user-signed-in">Favorites</a>
-                            <li><a class="js-user-signed-in js-sign-out">Sign out</a></li>
-                            <li><a class="js-user-anon js-sign-in">Sign in</a></li>
+                            <li><a>Sign in</a></li>
                         </ul>
                     </li>
                     <li>
@@ -82,6 +80,9 @@
                     <b>Hey, You stole this recipe from someone!</b>
                     {{- end }}
                     <br>Yeah probably, I give credit at the bottom of every recipe, sometimes I make small changes too.
+
+                    <br><br><b>Is that a photo of you?</b>
+                    <br>No sadly not, it is a photo from the talented photographer Aaron Thomas. Check out his other photos on <a href="https://unsplash.com/@aaronphs">Unsplash</a>
                 </p>
             </section>
         <!-- Footer -->

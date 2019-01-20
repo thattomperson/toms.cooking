@@ -1,6 +1,6 @@
-;(function($, firebase) {
-  
+;(function () {
 
+})();
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       $('.js-user-signed-in').show()
@@ -33,48 +33,11 @@
      var div = document.createElement('div')
      var c = document.createElement('span')
 
-     c.style.background = 'transparent'
-     c.style.margin = 'auto'
-     c.style.width = '360px'
-
-     div.style.position = 'fixed'
-     div.style.left = div.style.right = div.style.top = div.style.bottom = "0px";
-     div.style.backgroundColor = 'rgba(0,0,0,.3)'
-     div.style.display = 'flex'
-     div.style.alignItems = 'center'
-
-     div.style.zIndex = 99999
-     div.appendChild(c)
+     
      document.body.prepend(div)
      ui.start(c, uiConfig);
-  })
+  }) 
 
-  // console.log('binding')
-  // var pjaxContainer = $('.pjax')
-
-  // $('body').on('click', 'a[pjax]', function (e) {
-  //   e.preventDefault()
-  //   var url = this.href
-  //   console.log('getting ' + url)
-  //   var req = $.get(url)
-
-  //   req.always(function (res) {
-  //     var html = document.createElement('html')
-  //     html.innerHTML = res;
-
-  //     content = html.querySelector('.pjax')
-  //     title = html.querySelector('title')
-
-  //     window.history.pushState({}, title.innerText, url)
-      
-  //     pjaxContainer.html(content.innerHTML)
-  //   })
-  // })
-
-
-
- 
-})(jQuery, firebase);
 
 var options = {
   caseSensitive: true,
@@ -91,6 +54,18 @@ var options = {
   ]
 };
 
+function Auth() {
+  return {
+    view: (vnode) => {
+      return [
+        m('span.opener', ['My Recipies']),
+        m('ul', [
+          m('a', 'Test')
+        ])
+      ]
+    }
+  }
+}
 
 function Results() {
   function result(res) {
@@ -123,23 +98,19 @@ function Search() {
   let fuse;
 
   function oninput({ target: { value }}) {
-    console.log('oninput', value)
     results = value ? fuse.search(value) : []
   }
 
-  function onblur() {
-    console.log('onblur')
-    
+  function onblur() {    
     setTimeout(() => {
-      // oninput({target: {value: ''}})
-      // m.redraw()
+      oninput({target: {value: ''}})
+      m.redraw()
     }, 1000)
   }
 
   return {
     oninit: function(vnode){
-      fetch('/index.json')
-        .then(res => res.json())
+      m.request('/index.json')
         .then(list => fuse = new Fuse(list, options))
     },
     view: () => (m('form', [
@@ -150,6 +121,7 @@ function Search() {
 }
 
 m.mount(document.getElementById('search'), Search)
+m.mount(document.getElementById('auth-cont'), Auth)
 
 
 // const query = $('#query')
