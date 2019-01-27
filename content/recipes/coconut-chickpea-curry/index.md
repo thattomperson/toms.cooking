@@ -7,6 +7,7 @@ tags:
     - Simple
     - Healthy
     - Gluten-Free
+    - Curry
 original: 
     host: Yup It's Vegan
     url: https://yupitsvegan.com/easy-coconut-chickpea-curry/

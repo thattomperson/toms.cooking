@@ -1,17 +1,17 @@
 ---
 title: "Mussaman Curry Paste"
 date: 2019-01-27T13:23:16+10:30
-tags: [Thai, vegetarian, curry]
+tags: [Thai, vegetarian, curry, base, spices]
 ingredients:
 - 1 tbsp coriander seeds
-- 1/2 ts cardamon seeds
-- 1 ts cumin seeds
+- 1/2 tsp cardamon seeds
+- 1 tsp cumin seeds
 - 3cm piece cinnnamon stick
 - 3 whole cloves
-- 1/2 ts peppercorns
-- 1/2 ts grated fresh nutmeg
+- 1/2 tsp peppercorns
+- 1/2 tsp grated fresh nutmeg
 - 6 large dried chillies, seeded
-- 3 ts dried shrimp paste
+- 3 tsp dried shrimp paste
 - 1 tbsp chopped lemon grass
 - 1 tbsp cjopped coriander root
 - 8 cloves of garlic
@@ -19,7 +19,7 @@ ingredients:
 - 5 thin slices fresh ginger
 - 5 thin slices fresh galangal
 - grated rind of 1/2 lime or 1 kaffir lime
-- 1 1/4 ts salt
+- 1 1/4 tsp salt
 method:
 - Heat a small frying pan over medium heat.
 - Add the coriander, cardamon, and cumin seeds with the cinnamon stick, cloves, and peppercorns; gently agitate until the spices are aromatic (about 1 min)
