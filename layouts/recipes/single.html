@@ -26,7 +26,7 @@
                                 type="checkbox"
                                 id="i-{{ $index }}"
                                 name="i-{{ $index }}"
-                            ><label for="i-{{ $index }}">{{ $elm }}</label>
+                            ><label for="i-{{ $index }}">{{ $elm | markdownify }}</label>
                         </li>
                     {{ else }}
                         {{ range $name, $ings :=  $elm }}
@@ -37,7 +37,7 @@
                                     type="checkbox"
                                     id="i-{{ $index }}"
                                     name="i-{{ $index }}"
-                                ><label for="i-{{ $index }}">{{ $ing }}</label>
+                                ><label for="i-{{ $index }}">{{ $ing | markdownify }}</label>
                             </li>
                             {{ end }}
                         {{ end }}

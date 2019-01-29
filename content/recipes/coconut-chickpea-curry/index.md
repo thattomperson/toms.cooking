@@ -23,7 +23,7 @@ ingredients:
 - 1 large red onion thinly sliced
 - 3 cloves garlic minced
 - 1 inch fresh ginger peeled and pinced
-- 1 tbsp garam masala
+- 1 tbsp [garam masala](/garam-masala)
 - 1/4 tsp ground turmeric
 - 1/4 tsp ground black pepper (reduce to 1/8 tsp if freshly-ground)
 - 1/4 tsp cayenne pepper (or to taste)
