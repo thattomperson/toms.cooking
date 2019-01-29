@@ -30,7 +30,7 @@ ingredients:
 - 1/4 tsp salt (plus more to taste)
 - 1 and 1/2 cups diced tomatoes (equal to 1 14-oz. can; drain before using)
 - 1 and 1/2 cups full-fat coconut milk (equal to 1 14-oz. can)
-- 1 and 3/4 cups cooked chickpeas (equal to 1 16-oz. can; drain and rinse  before using)
+- 1 and 3/4 cups [cooked chickpeas](/cheakpeas) (equal to 1 16-oz. can; drain and rinse  before using)
 - 2 tbsp freshly-squeezed lime juice (1 lime) (lemon also works)
 - chopped fresh cilantro (coriander) for serving
 method:
