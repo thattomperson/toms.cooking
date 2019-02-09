@@ -1,7 +1,7 @@
 ---
 title: "Garam Masala"
 date: 2019-01-27T13:40:41+10:30
-tags: [indian, vegetarian, curry, base, spices]
+categories: [indian, vegetarian, curry, base, spices]
 ingredients:
 - 2 tbsp black peppercorns
 - 8 whole cloves

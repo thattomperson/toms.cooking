@@ -1,0 +1,17 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+  <a>search</a>
+</header>
+
+<section>
+    <div class="card-mason">
+        {{ range .Pages }}
+        <a class="max-w-1/2-screen masonry-brick" href="{{ .RelPermalink }}">
+            {{ partial "card/stacked" . }}
+        </a>
+        {{ end }}
+    </div>
+
+</section>
+{{ end }}

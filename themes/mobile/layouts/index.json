@@ -1,0 +1,13 @@
+[{{- range $index, $page := where .Data.Pages "Section" "recipes" -}}
+{{- if and $index (gt $index 0) -}},{{- end -}}
+{
+    "uri": "{{ $page.Permalink }}",
+    "title": {{ $page.Title | jsonify }},
+    "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}{{ $tag | jsonify }}{{ end }}],
+    "description": {{ $page.Description | jsonify }},
+    {{ $original := $page.Resources.GetMatch "hero.*" -}}
+    {{- with $original -}}
+    "image": "{{ (.Fill "60x60").Permalink }}"
+    {{- end }}
+}
+{{- end -}}]

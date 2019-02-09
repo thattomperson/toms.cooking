@@ -1,7 +1,7 @@
 ---
 title: Pasta Aglio e Olio
 date: "2018-12-27"
-tags: 
+categories: 
     - Vegetarian
     - Italian
     - Simple

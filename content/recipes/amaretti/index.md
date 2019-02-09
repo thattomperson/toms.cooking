@@ -1,7 +1,7 @@
 ---
 title: Amaretti
 date: 2019-01-08T12:08:50+10:30
-tags:
+categories:
 - Vegetarian
 - Simple
 - Baking
@@ -21,3 +21,10 @@ method:
 makes: 40 amaretti
 ---
 Tastey little Itallian macaroons, perfect for entertaining guests or with a cup of coffee in the afternoon
+
+
+{-- step 1 --}
+Hello
+
+{-- step 2 --}
+Good bie

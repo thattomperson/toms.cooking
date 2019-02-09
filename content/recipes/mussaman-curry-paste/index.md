@@ -1,7 +1,7 @@
 ---
 title: "Mussaman Curry Paste"
 date: 2019-01-27T13:23:16+10:30
-tags: [Thai, vegetarian, curry, base, spices]
+categories: [Thai, vegetarian, curry, base, spices]
 ingredients:
 - 1 tbsp coriander seeds
 - 1/2 tsp cardamon seeds

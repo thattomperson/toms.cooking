@@ -1,7 +1,7 @@
 ---
 title: Vegetarian One-Pot Italian Soup
 date: "2018-12-06"
-tags: 
+categories: 
     - Vegetarian
     - Italian
     - Soup

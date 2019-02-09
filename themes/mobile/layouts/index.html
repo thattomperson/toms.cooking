@@ -1,0 +1,27 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+  <a>search</a>
+</header>
+
+<section>
+  <header>
+    <h2>Categories</h2>
+    <a href="/tags">see all ›</a>
+  </header>
+  <div class="cards">
+    {{/* {{ range first 10 .Pages }} */}}
+    {{ range first 5 (.Site.Taxonomies.categories.ByCount) }}
+    {{/* {{ range $pages }} */}}
+    {{ $tag := $.Site.GetPage (printf "/categories/%s" .Name) }}
+    <a href="{{ $tag.RelPermalink }}">
+      {{ partial "card/portrait" $tag }}
+    </a>
+    {{ end }}
+    {{ $tag := $.Site.GetPage "/categories" }}
+    <a href="{{ $tag.RelPermalink }}">
+      {{ partial "card/portrait" $tag }}
+    </a>
+  </div>
+</section>
+{{ end }}

@@ -5,6 +5,8 @@ languageCode = "en-au"
 title = "Tom's Cooking"
 paginate = 12
 
+theme = "mobile"
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
@@ -22,4 +24,4 @@ recipes = "/:title/"
 home = [ "html", "rss", "json"]
 
 [taxonomies]
-  tag = "tags"
+category = "categories"

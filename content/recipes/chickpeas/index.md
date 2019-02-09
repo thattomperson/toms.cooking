@@ -1,7 +1,7 @@
 ---
 title: "Chickpeas"
 date: 2019-01-29T20:08:01+10:30
-tags: []
+categories: []
 original:
     host: Taste
     url: https://www.taste.com.au/quick-easy/articles/how-to-prepare-dried-chickpeas/t3mrrg7p

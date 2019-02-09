@@ -1,0 +1,27 @@
+{{ $card := . }}
+{{ $image := .Resources.GetMatch "hero.*" }}
+
+{{ with $image }}
+  <div class="card-portrait">
+    <div
+      class="card-portrait-img"
+      style="background-image: url('{{ ($image.Fill "200x300 Center").RelPermalink }}')"
+      title="{{ $card.Title }}">
+      <h3>
+        {{ $card.Title }}
+      </h3>
+    </div>
+  </div>
+{{ else }}
+  <div class="card-portrait">
+    <div
+      class="card-portrait-img"
+      style="background-image: url('https://tailwindcss.com/img/card-left.jpg')"
+      title="{{ $card.Title }}">
+    
+    <h3>
+      {{ $card.Title }}
+    </h3>
+    </div>
+  </div>
+{{ end }}
