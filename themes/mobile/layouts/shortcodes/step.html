@@ -1,0 +1,12 @@
+
+{{ $.Page.Scratch.Add "steps" 1 }}
+{{ $image := $.Page.Resources.GetMatch (printf "step%d.*" ($.Page.Scratch.Get "steps")) }}
+
+<div>
+{{ with $image }}
+    <img src="{{ .RelPermalink }}">
+{{ end }}
+
+<h1>Step {{ $.Page.Scratch.Get "steps" }}</h1>
+<div> {{ .Inner }} </div>
+</div>

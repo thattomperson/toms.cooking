@@ -6,12 +6,12 @@
 
 <section>
     <div class="card-mason">
-        {{ range .Pages }}
+        {{ range .Paginator.Pages }}
         <a class="max-w-1/2-screen masonry-brick" href="{{ .RelPermalink }}">
             {{ partial "card/stacked" . }}
         </a>
         {{ end }}
     </div>
-
+    {{ template "_internal/pagination.html" . }}
 </section>
 {{ end }}

@@ -23,8 +23,11 @@ makes: 40 amaretti
 Tastey little Itallian macaroons, perfect for entertaining guests or with a cup of coffee in the afternoon
 
 
-{-- step 1 --}
-Hello
+{{% step %}}
+Hello **World!**
 
-{-- step 2 --}
-Good bie
+{{% /step %}}
+
+{{% step %}}
+Hello **Kappa!**
+{{% /step %}}
