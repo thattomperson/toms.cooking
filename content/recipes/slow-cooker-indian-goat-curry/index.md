@@ -1,7 +1,6 @@
 ---
 title: "Slow Cooker Indian Goat Curry"
 date: 2019-02-15T14:59:09+10:30
-draft: true
 tags: 
 - indian
 - curry
@@ -9,7 +8,7 @@ original:
     host: My Heart Beets 
     url: https://myheartbeets.com/slow-cooker-goat-curry-indian/
 ingredients:
-- 2 pounds goat meat
+- 1kg goat meat
 - 2 red onions, chopped
 - 1.5 inch knob fresh ginger, minced
 - 3 cloves garlic, minced
@@ -24,7 +23,7 @@ ingredients:
 - 1 teaspoon kashmiri chili powder (if using cayenne use a little less)
 - 1 teaspoon paprika
 - 1-2 Serrano pepper, minced
-- 1 (28 ounce) can organic diced tomatoes
+- 1 (800g) can organic diced tomatoes
 - 1 teaspoon garam masala, add more to taste
 - 1/2 – 1 cup water, depending on how thick you’d like the curry
 method:
@@ -33,3 +32,4 @@ method:
 - Cook on high for 4 hours, stiring every hour.
 - Add tomatoes, garam masala, and water. Cook for another hour or until meat is tender.
 ---
+Super tasty and hearty goat curry, perfect to warm you up on cold days.
