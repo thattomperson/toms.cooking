@@ -50,6 +50,7 @@
         </div>
         {{ partial "sidebar" . }}
     </div>
+    {{ template "_internal/google_analytics_async.html" . }}
 
     {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.Permalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
