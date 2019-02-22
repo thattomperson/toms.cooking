@@ -23,10 +23,7 @@
     <link rel="stylesheet" media="print" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-7784427690889827"});
-    </script>
+    {{ template "_internal/google_analytics_async.html" . }}
 </head>
 <body class="is-preload">
     <div id="firebaseui-auth-container"></div>
@@ -50,7 +47,6 @@
         </div>
         {{ partial "sidebar" . }}
     </div>
-    {{ template "_internal/google_analytics_async.html" . }}
 
     {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.Permalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
