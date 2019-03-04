@@ -1,29 +1,11 @@
-workflow "Build, Test, and Publish" {
+workflow "Deploy to GitHub Pages" {
   on = "push"
-  resolves = ["Publish"]
+  resolves = ["hugo-deploy-gh-pages"]
 }
 
-action "Build" {
-  uses = "actions/npm@master"
-  args = "install"
-}
-
-action "Test" {
-  needs = "Build"
-  uses = "actions/npm@master"
-  args = "test"
-}
-
-# Filter for master branch
-action "Master" {
-  needs = "Test"
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-}
-
-action "Publish" {
-  needs = "Master"
-  uses = "actions/npm@master"
-  args = "publish --access public"
-  secrets = ["NPM_AUTH_TOKEN"]
+action "hugo-deploy-gh-pages" {
+  uses = "khanhicetea/gh-actions-hugo-deploy-gh-pages@master"
+  secrets = [
+    "GIT_DEPLOY_KEY"
+  ]
 }
