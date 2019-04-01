@@ -29,12 +29,8 @@
             <li>
               <a pjax href="{{ .Permalink }}">{{ .Title }}</a>
             </li>
-            {{
-              end
-            }}
-            {{
-              end
-            }}
+            {{ end }}
+            {{ end }}
           </ul>
         </li>
       </ul>
@@ -109,7 +105,7 @@
         <b>Hey, You stole this recipe from {{ $host }}!</b>
         {{ else }}
         <b>Hey, You stole this recipe from someone!</b>
-        {{ -end }}
+        {{- end }}
         <br />Yeah probably, I give credit at the bottom of every recipe,
         sometimes I make small changes too.
 
