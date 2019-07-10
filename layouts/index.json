@@ -6,8 +6,10 @@
     "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}{{ $tag | jsonify }}{{ end }}],
     "description": {{ $page.Description | jsonify }},
     {{ $original := $page.Resources.GetMatch "hero.*" -}}
+    
+    "image": "
     {{- with $original -}}
-    "image": "{{ (.Fill "60x60").Permalink }}"
-    {{- end }}
+    {{ (.Fill "60x60").Permalink }}
+    {{- end -}}"
 }
 {{- end -}}]

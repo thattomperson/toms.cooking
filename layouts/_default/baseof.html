@@ -22,7 +22,7 @@
     {{ $style := resources.Get "css/print.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet" media="print" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" /> -->
     {{ template "_internal/google_analytics_async.html" . }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>

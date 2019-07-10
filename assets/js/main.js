@@ -1,44 +1,3 @@
-;(function () {
-
-})();
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      $('.js-user-signed-in').show()
-      $('.js-user-anon').hide()
-      // hide sign in
-
-    } else {
-      $('.js-user-signed-in').hide()
-      $('.js-user-anon').show()
-    }
-  })
-
-
-
-  var uiConfig = {
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    ]
-  }
-
-  $('.js-sign-in').click(function () {
-    if (firebase.auth().currentUser) {
-      return
-    }
-
-
-     // Initialize the FirebaseUI Widget using Firebase.
-     var ui = new firebaseui.auth.AuthUI(firebase.auth());
-     // The start method will wait until the DOM is loaded.
-     var div = document.createElement('div')
-     var c = document.createElement('span')
-
-     
-     document.body.prepend(div)
-     ui.start(c, uiConfig);
-  }) 
-
-
 var options = {
   caseSensitive: true,
   shouldSort: true,
@@ -53,19 +12,6 @@ var options = {
     "description"
   ]
 };
-
-function Auth() {
-  return {
-    view: (vnode) => {
-      return [
-        m('span.opener', ['My Recipies']),
-        m('ul', [
-          m('a', 'Test')
-        ])
-      ]
-    }
-  }
-}
 
 function Results() {
   function result(res) {
@@ -111,17 +57,19 @@ function Search() {
   return {
     oninit: function(vnode){
       m.request('/index.json')
-        .then(list => fuse = new Fuse(list, options))
+        .catch(e => console.log(e))
+        .then(list => {
+          fuse = new Fuse(list, options)
+        })
     },
     view: () => (m('form', [
-      m('input', { oninput, onblur, onfocus: oninput,  autocomplete: 'off', type: 'text', id: 'query', class: results.length ? 'active' : '', placeholder: 'Search'}),
+      m('input', { oninput, onblur, onfocus: oninput, autocomplete: 'off', type: 'text', id: 'query', class: results.length ? 'active' : '', placeholder: 'Search'}),
       m(Results, { results })
     ]))
   }
 }
 
 m.mount(document.getElementById('search'), Search)
-m.mount(document.getElementById('auth-cont'), Auth)
 
 
 // const query = $('#query')
