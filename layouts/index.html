@@ -16,7 +16,7 @@
     <span class="image object">
         {{ $hero := resources.Get "images/hero.jpg" }}
         {{ with $hero }}
-        <img src="{{ (.Resize "600x").Permalink }}" alt="" />
+        <img src="{{ (.Resize "600x").RelPermalink }}" alt="" />
         {{ end }}
     </span>
 </section>

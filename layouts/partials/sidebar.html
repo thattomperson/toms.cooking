@@ -21,7 +21,7 @@
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
             {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
             <li>
-              <a pjax href="{{ .Permalink }}">{{ .Title }}</a>
+              <a pjax href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
             {{ end }}
             {{ end }}

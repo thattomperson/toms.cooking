@@ -1,7 +1,7 @@
 [{{- range $index, $page := where .Data.Pages "Section" "recipes" -}}
 {{- if and $index (gt $index 0) -}},{{- end -}}
 {
-    "uri": "{{ $page.Permalink }}",
+    "uri": "{{ $page.RelPermalink }}",
     "title": {{ $page.Title | jsonify }},
     "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}{{ $tag | jsonify }}{{ end }}],
     "description": {{ $page.Description | jsonify }},
@@ -9,7 +9,7 @@
     
     "image": "
     {{- with $original -}}
-    {{ (.Fill "60x60").Permalink }}
+    {{ (.Fill "60x60").RelPermalink }}
     {{- end -}}"
 }
 {{- end -}}]

@@ -9,7 +9,7 @@
         <ul class="tags">
         {{ range $name := .Params.tags }}
             {{ with $.Site.GetPage (printf "/tags/%s" ($name | lower)) }}
-            <li><a href="{{ .Permalink }}" class="button">{{ .Title }}</a></li>
+            <li><a href="{{ .RelPermalink }}" class="button">{{ .Title }}</a></li>
             {{ end }}
         {{ end }}
         </ul>
@@ -50,7 +50,7 @@
                 {{ $original := .Resources.GetMatch "hero.*" }}
                 {{ if $original }}
                     <div class="right image">
-                        <img src="{{ ($original.Resize "600x").Permalink }}" alt="{{ .Title }}" />
+                        <img src="{{ ($original.Resize "600x").RelPermalink }}" alt="{{ .Title }}" />
                     </div>
                 {{ end }}
 
