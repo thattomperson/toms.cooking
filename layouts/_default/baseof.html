@@ -16,11 +16,11 @@
     <meta name="description" content="{{ .Summary | plainify }}">
     {{ end }}
 
-    {{ $style := resources.Get "css/main.css" | minify | fingerprint "sha512" }}
-    <link rel="stylesheet"  href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet"  href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-    {{ $style := resources.Get "css/print.css" | minify | fingerprint "sha512" }}
-    <link rel="stylesheet" media="print" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet" media="print" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
     <!-- <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" /> -->
     {{ template "_internal/google_analytics_async.html" . }}
