@@ -62,44 +62,11 @@ function Search() {
           fuse = new Fuse(list, options)
         })
     },
-    view: () => (m('form', [
+    view: () => m('form', [
       m('input', { oninput, onblur, onfocus: oninput, autocomplete: 'off', type: 'text', id: 'query', class: results.length ? 'active' : '', placeholder: 'Search'}),
       m(Results, { results })
-    ]))
+    ])
   }
 }
 
 m.mount(document.getElementById('search'), Search)
-
-
-// const query = $('#query')
-// query.one('focus', () => {
-//   let fuse = null
-//   let root = document.createElement('div')
-
-//   root.className = 'search-results'
-
-//   fetch('/index.json')
-//     .then(res => res.json())
-//     .then(list => new Fuse(list, options))
-//     .then(f => fuse = f)
-
-//   function render(results, search, enabled) {
-//     m.render(root, enabled ? m("ul", [
-//       results.length ? results.map((r) => m('li', [
-//         m('a', {href: r.uri}, [decodeURIComponent(r.title)])
-//       ])) : m('li', [search ? 'No Results' : 'Search for something'])
-//     ]) : [])
-//   }
-
-//   update = () => render(query.val() ? fuse.search(query.val()) : [], query.val(), true)
-
-//   query.on('input', update)
-//   query.on('focus', update)
-
-//   query.on('blur', () => {
-//     setTimeout(() => render([], query.val(), false), 1000)
-//   })
-
-//   query.parent().append(root)
-// })

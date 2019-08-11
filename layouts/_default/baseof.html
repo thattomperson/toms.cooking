@@ -18,11 +18,9 @@
 
     {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet"  href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-
     {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet" media="print" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-    <!-- <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" /> -->
     {{ template "_internal/google_analytics_async.html" . }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -54,26 +52,12 @@
         {{ partial "sidebar" . }}
     </div>
 
-    {{ $vendor := slice (resources.Get "js/jquery.min.js") (resources.Get "js/browser.min.js") (resources.Get "js/breakpoints.min.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
+    {{ $vendor := slice (resources.Get "js/jquery.js") (resources.Get "js/browser.js") (resources.Get "js/breakpoints.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
 
     {{ $script := slice (resources.Get "js/util.js") (resources.Get "js/theme.js") | resources.Concat "js/theme.js" | minify | fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyB5S0AjZYGfe8lHKEVWcyUkJyuO0H-zX-E",
-        authDomain: "toms-cooking.firebaseapp.com",
-        databaseURL: "https://toms-cooking.firebaseio.com",
-        projectId: "toms-cooking",
-        storageBucket: "toms-cooking.appspot.com",
-        messagingSenderId: "775892925094"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js"></script>
     <script src="https://unpkg.com/mithril/mithril.js"></script>
     {{ $script := slice (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}

@@ -23,14 +23,14 @@ ingredients:
 - 1 large red onion thinly sliced
 - 3 cloves garlic minced
 - 1 inch fresh ginger peeled and pinced
-- 1 tbsp [garam masala](/garam-masala)
+- 1 tbsp [garam masala](/garam-masala/)
 - 1/4 tsp ground turmeric
 - 1/4 tsp ground black pepper (reduce to 1/8 tsp if freshly-ground)
 - 1/4 tsp cayenne pepper (or to taste)
 - 1/4 tsp salt (plus more to taste)
 - 1 and 1/2 cups diced tomatoes (equal to 1 14-oz. can; drain before using)
 - 1 and 1/2 cups full-fat coconut milk (equal to 1 14-oz. can)
-- 1 and 3/4 cups [cooked chickpeas](/cheakpeas) (equal to 1 16-oz. can; drain and rinse  before using)
+- 1 and 3/4 cups [cooked chickpeas](/chickpeas/) (equal to 1 16-oz. can; drain and rinse  before using)
 - 2 tbsp freshly-squeezed lime juice (1 lime) (lemon also works)
 - chopped fresh cilantro (coriander) for serving
 method:
