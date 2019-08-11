@@ -28,4 +28,4 @@ go install -i --tags extended
 # Back to the dir with your project source
 cd $CLONE_DIR
 # Build project.
-$GOPATH/bin/hugo
+$GOPATH/bin/hugo --minify
