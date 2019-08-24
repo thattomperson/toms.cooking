@@ -1,6 +1,6 @@
 ---
 title: Slow Cooker Beef Ragu
-date: "2018-12-27"
+date: "2019-08-24"
 tags: 
   - Italian
   - Slow Cooker
