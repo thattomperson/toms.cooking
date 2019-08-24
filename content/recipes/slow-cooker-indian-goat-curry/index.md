@@ -4,6 +4,7 @@ date: 2019-02-15T14:59:09+10:30
 tags: 
 - indian
 - curry
+- Slow Cooker
 original: 
     host: My Heart Beets 
     url: https://myheartbeets.com/slow-cooker-goat-curry-indian/
