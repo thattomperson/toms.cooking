@@ -3,7 +3,7 @@
 	"theme_color": "#f56a6a",
 	"name": "Tom's Cooking",
 	"short_name": "Toms.cooking",
-	"display": "minimal-ui",
+	"display": "standalone",
 	"start_url": "/",
 	"icons": [
 		{
