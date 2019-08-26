@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "toms.cooking",
+  "description": "toms.cooking",
   "version": "0.0.1",
   "scripts": {
     "now-build": "yarn export",

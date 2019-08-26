@@ -1,8 +1,8 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#f5f6f7",
+	"theme_color": "#f56a6a",
+	"name": "Tom's Cooking",
+	"short_name": "Toms.cooking",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
