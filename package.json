@@ -3,7 +3,7 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "now-build": "yarn build",
+    "now-build": "yarn export",
     "watch:tailwind": "postcss src/tailwind.css -o static/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss src/tailwind.css -o static/index.css",
     "dev": "run-p --race watch:tailwind watch:sapper",
