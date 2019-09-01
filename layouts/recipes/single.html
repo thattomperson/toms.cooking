@@ -111,17 +111,25 @@
     "image": "{{ ($original.Resize "600x").RelPermalink }}",
     {{ end }}
     "recipeIngredient": [
+    {{ $ingredientLen := .Params.ingredients | len}}
     {{ range $index, $elm := .Params.ingredients }}
-      "{{- $elm -}}",
+      "{{- $elm -}}"
+      {{ if ne (add 1 $index) $ingredientLen }}
+        ,
+      {{ end }}
     {{ end }}
     ],
     "name": "{{ .Title }}",
     "recipeInstructions": [
+    {{ $methodLen := .Params.method | len}}
     {{ range $index, $elm := .Params.method }}
       {
         "@type": "HowToSection",
         "text": "{{ $elm }}"
       }
+      {{ if ne (add 1 $index) $methodLen }}
+        ,
+      {{ end }}
     {{ end }}
     ]
   }
