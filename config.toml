@@ -5,6 +5,8 @@ languageCode = "en-au"
 title = "Tom's Cooking"
 paginate = 12
 
+theme = "toms-cooking-theme"
+
 googleAnalytics = "UA-135024983-1"
 
 [privacy]

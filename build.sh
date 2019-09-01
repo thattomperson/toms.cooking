@@ -4,6 +4,9 @@ set -xe
 HUGO_VERSION=v0.56.3
 CLONE_DIR=$(pwd)
 
+mkdir -p themes
+git clone git@github.com:thattomperson/toms.cooking-theme.git themes/toms-cooking-theme
+
 # Install wget
 yum install -y wget
 # Install go
@@ -27,5 +30,6 @@ go get -d .
 go install -i --tags extended
 # Back to the dir with your project source
 cd $CLONE_DIR
+
 # Build project.
 $GOPATH/bin/hugo --minify
