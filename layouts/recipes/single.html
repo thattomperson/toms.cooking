@@ -90,4 +90,41 @@
         </div>
     </div>
 </section>
+{{ . }}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Recipe",
+    {{ if .Params.original }}
+    "author": "{{ .Params.original.host }}",
+    {{ else }}
+    "author": "Thomas Albrighton",
+    {{ end }}
+    "datePublished": "{{ .PublishDate }}",
+    {{ if .Description }}
+    "description": "{{ .Discription }}",
+    {{ else if .IsPage }}
+    "description": "{{ .Summary | plainify }}",
+    {{ end }}
+    {{ $original := .Resources.GetMatch "hero.*" }}
+    {{ if $original }}
+    "image": "{{ ($original.Resize "600x").RelPermalink }}",
+    {{ end }}
+    "recipeIngredient": [
+    {{ range $index, $elm := .Params.ingredients }}
+      "{{- $elm -}}",
+    {{ end }}
+    ],
+    "name": "{{ .Title }}",
+    "recipeInstructions": [
+    {{ range $index, $elm := .Params.method }}
+      {
+        "@type": "HowToSection",
+        "text": "{{ $elm }}"
+      }
+    {{ end }}
+    ]
+  }
+  </script>
 {{ end }}
