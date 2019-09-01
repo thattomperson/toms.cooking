@@ -5,7 +5,7 @@ HUGO_VERSION=v0.56.3
 CLONE_DIR=$(pwd)
 
 mkdir -p themes
-git clone git@github.com:thattomperson/toms.cooking-theme.git themes/toms-cooking-theme
+git clone https://github.com/thattomperson/toms.cooking-theme.git themes/toms-cooking-theme
 
 # Install wget
 yum install -y wget
