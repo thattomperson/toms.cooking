@@ -90,7 +90,6 @@
         </div>
     </div>
 </section>
-{{ . }}
 
 <script type="application/ld+json">
   {
@@ -103,7 +102,7 @@
     {{ end }}
     "datePublished": "{{ .PublishDate }}",
     {{ if .Description }}
-    "description": "{{ .Discription }}",
+    "description": "{{ .Description }}",
     {{ else if .IsPage }}
     "description": "{{ .Summary | plainify }}",
     {{ end }}
