@@ -1,0 +1,66 @@
+#sidebar {
+    display: none;
+}
+#wrapper {
+    min-height: 0;
+}
+
+
+.header {
+    padding-top: 0;
+}
+
+.header .icons {
+    display: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 14px;
+    margin: 5px;
+    padding: 0;
+}
+
+#main > .inner {
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.25em;
+}
+
+.recipe .intro {
+    display: none;
+}
+
+header.main .icon {
+    display: none;
+}
+
+a[href^=http]::after {
+    content: ' [' attr(href) ']';
+    font-size: 80%;
+}
+
+ul.tags, ul.actions {
+    display: none;
+}
+
+
+input[type=checkbox]+label,
+input[type=radio]+label {
+  padding-left: 0;
+}
+input[type=checkbox]+label::before,
+input[type=radio]+label::before {
+  display: none;
+}

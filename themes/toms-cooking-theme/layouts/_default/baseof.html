@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{- if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    {{- else -}}
+    <title>{{ .Site.Title }} {{ .Page.Title }}</title>
+    {{ end -}}
+
+    {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{ else if .IsPage }}
+    <meta name="description" content="{{ .Summary | plainify }}">
+    {{ end }}
+
+    {{ $style := resources.Get "scss/main.scss" | toCSS "css/main.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet"  href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
+    <link rel="stylesheet" media="print" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7784427690889827",
+        enable_page_level_ads: false
+      });
+    </script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header class="header">
+                    <a href="/" class="logo"><strong>Tom's</strong> Cooking</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/thattomperson/toms.cooking" class="icon fa-github"><span class="label">Github</span></a></li>
+                        {{/* <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li> */}}
+                    </ul>
+                </header>
+                <div class="pjax">
+                {{ block "main" . }}{{ end }}
+                </div>
+            </div>
+        </div>
+        {{ partial "sidebar" . }}
+    </div>
+
+    {{ $vendor := slice (resources.Get "js/jquery.js") (resources.Get "js/browser.js") (resources.Get "js/breakpoints.js") | resources.Concat "js/vendor.js" | minify | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
+
+    {{ $script := slice (resources.Get "js/util.js") (resources.Get "js/theme.js") | resources.Concat "js/theme.js" | minify | fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js"></script>
+    <script src="https://unpkg.com/mithril/mithril.js"></script>
+    {{ $script := slice (resources.Get "js/main.js") | resources.Concat "js/main.js" | minify | fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+</body>
+</html>

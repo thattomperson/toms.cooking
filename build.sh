@@ -4,9 +4,6 @@ set -xe
 HUGO_VERSION=v0.56.3
 CLONE_DIR=$(pwd)
 
-mkdir -p themes
-git clone https://github.com/thattomperson/toms.cooking-theme.git themes/toms-cooking-theme
-
 # Install wget
 yum install -y wget
 # Install go

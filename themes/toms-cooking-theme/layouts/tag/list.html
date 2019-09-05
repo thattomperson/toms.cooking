@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <section>
+        <header>
+            <div class="header minor"> 
+                <h2>{{ .Title }} Recipes</h2>
+            </div>
+        </header>
+        {{ partial "recipe-cards" .Paginator.Pages }}
+        <div class="col-12">
+            {{ partial "pagination" . }}
+        </div>
+    </section>
+{{ end }}

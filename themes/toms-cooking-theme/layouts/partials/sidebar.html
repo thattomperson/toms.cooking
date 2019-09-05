@@ -1,0 +1,97 @@
+<div id="sidebar">
+  <div class="inner">
+    <!-- Search -->
+    <section id="search" class="alt">
+      <form method="post" action="#">
+        <input type="text" name="query" id="query" placeholder="Search" />
+      </form>
+    </section>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <header class="major">
+        <h2>Menu</h2>
+      </header>
+      <ul>
+        <li><a pjax href="/">Homepage</a></li>
+        <li>
+          <span class="opener active">Recipes</span>
+          <ul>
+            <li><a pjax href="/recipes">All Recipes</a></li>
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <li>
+              <a pjax href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="adverts">
+      <header class="major">
+        <h2>Sponsored Content</h2>
+      </header>
+      <div class="mini-posts">
+        <article>
+          <ins class="adsbygoogle"
+            style="display:inline-block;width:250px;height:250px"
+            data-ad-client="ca-pub-7784427690889827"
+            data-ad-slot="3382432694"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </article>
+      </div>
+    </section>
+
+    {{/*
+    <section>
+      <header class="major">
+        <h2>Get in touch</h2>
+      </header>
+      <p>
+        Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit
+        lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam
+        facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+      </p>
+      <ul class="contact">
+        <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+        <li class="fa-phone">(000) 000-0000</li>
+        <li class="fa-home">
+          1234 Somewhere Road #8254<br />
+          Nashville, TN 00000-0000
+        </li>
+      </ul>
+    </section>
+    */}}
+
+    <section>
+      <header class="major">
+        <h2>FAQ</h2>
+      </header>
+      <p>
+        {{ $host := .Page.Params.original.host }}
+        {{ if $host }}
+        <b>Hey, You stole this recipe from {{ $host }}!</b>
+        {{ else }}
+        <b>Hey, You stole this recipe from someone!</b>
+        {{- end }}
+        <br />Yeah probably, I give credit at the bottom of every recipe,
+        sometimes I make small changes too.
+
+        <br /><br /><b>Is that a photo of you?</b> <br />No sadly not, it is a
+        photo from the talented photographer Aaron Thomas. Check out his other
+        photos on <a href="https://unsplash.com/@aaronphs">Unsplash</a>
+      </p>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+      <p class="copyright">
+        &copy; Tom's Cooking. All rights reserved.<br />Demo Images:
+        <a href="https://unsplash.com">Unsplash</a>. Design:
+        <a href="https://html5up.net">HTML5 UP</a>.
+      </p>
+    </footer>
+  </div>
+</div>

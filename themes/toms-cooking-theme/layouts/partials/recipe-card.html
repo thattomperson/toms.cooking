@@ -1,0 +1,14 @@
+
+<article>
+    <a href="{{ .RelPermalink }}" class="image">
+        {{ $original := .Resources.GetMatch "hero.*" }}
+        {{ with $original }}
+        <img src="{{ ((.Resize "600x").Fill "600x300").RelPermalink }}" alt="{{ .Title }}" />
+        {{ end }}
+    </a>
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Summary }}</p>
+    <ul class="actions">
+        <li><a href="{{ .RelPermalink }}" class="button">View</a></li>
+    </ul>
+</article>

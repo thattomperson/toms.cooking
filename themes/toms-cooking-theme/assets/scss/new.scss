@@ -1,0 +1,82 @@
+@import 'main';
+
+#query.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.results {
+    position: absolute;
+    width: 100%;
+}
+
+.results.active {
+    border: 1px solid #f56a6a;
+    box-shadow: 0 0 0 1px #f56a6a;
+    border-top: none;
+    border-bottom-left-radius: .375em;
+    border-bottom-right-radius: .375em;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+    list-style: none;
+}
+
+.results.active li {
+    border-top:1px solid #f5f6f7;
+    padding: 0 .5em 0 0;
+}
+
+.results.active li a {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: 60px auto;
+    grid-template-rows: auto;
+    // line-height: 2em;
+   
+}
+.results.active li img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.results.active li h3 {
+    grid-column-start: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+}
+
+.results.active li span {
+    grid-column-start: 2;
+    grid-row: 2;
+}
+// body::before {
+//     content: "max";
+//     position: fixed;
+//     display: block;
+//     top: 0;
+//     left: 0;
+//     background: black;
+//     color:white;
+//     z-index: 9999999999;    
+
+//     @include breakpoint('<=xlarge') {
+//         content: "xlarge";
+//     }
+//     @include breakpoint('<=large') {
+//         content: "large";
+//     }
+//     @include breakpoint('<=medium') {
+//         content: "medium";
+//     }
+//     @include breakpoint('<=small') {
+//         content: "small";
+//     }
+//     @include breakpoint('<=xsmall') {
+//         content: "xsmall";
+//     }
+//     @include breakpoint('<=xxsmall') {
+//         content: "xxsmall";
+//     }
+// }
+
