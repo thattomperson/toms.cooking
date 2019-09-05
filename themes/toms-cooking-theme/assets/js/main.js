@@ -70,3 +70,23 @@ function Search() {
 }
 
 m.mount(document.getElementById('search'), Search)
+
+let c = document.getElementById('recipe-container');
+if (c) {
+  const id = c.getAttribute('data-id');
+  const ingredients = c.querySelectorAll('#ingredients input');
+  for (let i = 0, ingredient; ingredient = ingredients[i]; i++) {
+    if (window.localStorage.getItem(id + ingredient.id)) {
+      ingredient.checked = true
+    }
+
+    ingredient.onchange = function (e) {
+      if (e.target.checked) {
+        window.localStorage.setItem(id + e.target.id, true)
+      } else {
+        window.localStorage.removeItem(id + e.target.id)
+      }
+    }
+  }
+  
+}

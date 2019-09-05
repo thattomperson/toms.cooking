@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section>
+<section id="recipe-container" data-id="{{ .File.UniqueID }}">
     <header class="main">
         <h1>{{ .Title }}
             <a href="#heart" class="icon fa-pull-right fa-heart-o"></a>
@@ -17,7 +17,7 @@
     <div class="row recipe">
         <div class="col-4 col-12-small">
             <h2>Ingredients</h2>
-            <ul class="alt">
+            <ul id="ingredients" class="alt">
                 {{ range $index, $elm := .Params.ingredients }}
                     
                     {{ if eq (printf "%T" $elm) "string" }}
