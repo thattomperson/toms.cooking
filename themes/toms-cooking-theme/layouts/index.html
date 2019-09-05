@@ -27,7 +27,7 @@
             <a class="button" href="/recipes">View All</a>
         </div>
     </header>
-    {{ partial "recipe-cards" (first 6 (where .Data.Pages "Section" "recipes")) }}
+    {{ partial "recipe-cards" (first 6 (where .Site.RegularPages "Section" "recipes")) }}
 </section>
 
 {{ end }}
