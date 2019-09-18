@@ -11,8 +11,8 @@
 }
 
 .results.active {
-    border: 1px solid #f56a6a;
-    box-shadow: 0 0 0 1px #f56a6a;
+    border: 1px solid _pallet(accent);
+    box-shadow: 0 0 0 1px _pallet(accent);
     border-top: none;
     border-bottom-left-radius: .375em;
     border-bottom-right-radius: .375em;
