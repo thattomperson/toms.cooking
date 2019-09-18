@@ -24,3 +24,4 @@ method:
 - Add onion, garlic, chilli flakes & anchovies cook for 5 minutes or until onion is soft. Add zucchini, juice, zest & parsley, cook for 2 minutes, season to taste.
 - Add zucchini mixture & rocket to pasta, toss to combine. Serve topped with parmesan.
 ---
+Light and flavourful pasta for when you are a little short on time and still want to eat something super tasty 👌
