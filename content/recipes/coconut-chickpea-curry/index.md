@@ -1,13 +1,7 @@
 ---
 title: Coconut Chickpea Curry
 date: "2019-01-16"
-tags: 
-    - Vegetarian
-    - Vegan
-    - Simple
-    - Healthy
-    - Gluten-Free
-    - Curry
+tags: [curry, simple, healthy, vegetarian, vegan, gluten-free]
 original: 
     host: Yup It's Vegan
     url: https://yupitsvegan.com/easy-coconut-chickpea-curry/

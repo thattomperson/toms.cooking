@@ -1,12 +1,7 @@
 ---
 title: Amaretti
 date: 2019-01-08T12:08:50+10:30
-tags:
-- Vegetarian
-- Simple
-- Baking
-- Biscuits
-- Gluten-Free
+tags: [baking, simple, biscuits, gluten-free]
 description: Italian macaroons
 ingredients:
 - 500g almond meal

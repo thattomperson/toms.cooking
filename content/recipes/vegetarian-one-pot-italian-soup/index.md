@@ -1,11 +1,7 @@
 ---
 title: Vegetarian One-Pot Italian Soup
 date: "2018-12-06"
-tags: 
-    - Vegetarian
-    - Italian
-    - Soup
-    - Healthy
+tags: [vegetarian, italian, soup, healthy]
 original: 
     host: Bondi Harvest
     url: https://bondiharvest.com/portfolio/vegetarian-one-pot-italian-soup/

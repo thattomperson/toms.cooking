@@ -1,9 +1,7 @@
 ---
 title: Slow Cooker Beef Ragu
 date: "2019-08-24"
-tags: 
-  - Italian
-  - Slow Cooker
+tags: [indian, pasta, slow cooker]
 original: 
   host: Taste.com
   url: https://www.taste.com.au/recipes/slow-cooker-beef-ragu/718bfd54-f8fd-4e68-a740-16ac36f621aa
