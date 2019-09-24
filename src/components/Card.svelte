@@ -15,7 +15,7 @@
   }
 
   .card-content {
-
+    
   }
 
   .card-image {
