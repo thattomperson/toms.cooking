@@ -10,7 +10,7 @@
   .card {
     border-radius: 8px;
     width: 295px;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: white;
 
     box-shadow: rgba(13, 51, 32, .1) 0px 6px 20px;

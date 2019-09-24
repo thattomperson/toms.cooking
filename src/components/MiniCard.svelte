@@ -2,11 +2,9 @@
   <img class="card-image" src="{img}?{rand}" alt="{name}">
   <div class="card-content">
     <h2 class="card-heading">{name}</h2>
-
-    <GhostButton href="{href}">Cook</GhostButton>
+    <GhostButton href="{href}">Cook</GhostButton>    
   </div>
 </div>
-
 
 <style>
   .card {
@@ -14,7 +12,6 @@
     width: 295px;
     overflow: hidden;
     background-color: white;
-
     box-shadow: rgba(13, 51, 32, .1) 0px 6px 20px;
   }
 
