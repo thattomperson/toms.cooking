@@ -1,7 +1,9 @@
 <div class="card">
   <img class="card-image" src="{img}?{rand}" alt="{name}">
   <div class="card-content">
-    <h1 class="card-heading">{name}</h1>
+    <h2 class="card-heading">{name}</h2>
+
+    <GhostButton href="{href}">Cook</GhostButton>
   </div>
 </div>
 
@@ -10,14 +12,14 @@
   .card {
     border-radius: 8px;
     width: 295px;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: white;
 
     box-shadow: rgba(13, 51, 32, .1) 0px 6px 20px;
   }
 
   .card-content {
-    padding: 5px;
+    padding: 10px;
   }
 
   .card-heading {
@@ -25,16 +27,20 @@
   }
 
   .card-image {
-    height: 353px;
+    height: 130px;
     width: 100%;
+
     object-fit: cover;
   }
 </style>
 
 
 <script>
-  export let img = "https://placeholdmon.thattomperson.now.sh/295x353"
+  import GhostButton from './GhostButton.svelte'
+
+  export let img = "https://placeholdmon.thattomperson.now.sh/295x130"
   export let name = ""
+  export let href = ""
 
   let rand = Math.random()
 </script>
