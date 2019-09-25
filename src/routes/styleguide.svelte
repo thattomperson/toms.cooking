@@ -16,6 +16,10 @@
 
 
 <Grid>
+  <div class="qa qa-recipe-mini-card">
   <RecipeMiniCard recipe={recipe}></RecipeMiniCard>
+  </div>
+  <div class="qa qa-recipe-card">
   <RecipeCard recipe={recipe}></RecipeCard>
+  </div>
 </Grid>

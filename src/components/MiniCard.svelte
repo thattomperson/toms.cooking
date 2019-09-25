@@ -1,5 +1,5 @@
 <div class="card">
-  <img class="card-image" src="{img}?{rand}" alt="{name}">
+  <img class="card-image" src="{img}" alt="{name}">
   <div class="card-content">
     <h2 class="card-heading">{name}</h2>
     <GhostButton href="{href}">Cook</GhostButton>    
@@ -35,9 +35,8 @@
 <script>
   import GhostButton from './GhostButton.svelte'
 
-  export let img = "https://placeholdmon.thattomperson.now.sh/295x130"
+
+  export let img = "https://via.placeholder.com/295x130"
   export let name = ""
   export let href = ""
-
-  let rand = Math.random()
 </script>

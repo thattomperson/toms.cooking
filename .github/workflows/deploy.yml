@@ -15,6 +15,8 @@ jobs:
         run: yarn install
       - name: Install Functions Dependencies
         run: cd functions; yarn install
+      - name: Test
+        run: yarn test
       - name: Deploy to Firebase
         run: yarn deploy
         env:

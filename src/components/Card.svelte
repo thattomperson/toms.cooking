@@ -1,5 +1,5 @@
 <div class="card">
-  <img class="card-image" src="{img}?{rand}" alt="{name}">
+  <img class="card-image" src="{img}" alt="{name}">
   <div class="card-content">
     <h1 class="card-heading">{name}</h1>
   </div>
@@ -33,8 +33,6 @@
 
 
 <script>
-  export let img = "https://placeholdmon.thattomperson.now.sh/295x353"
+  export let img = "https://via.placeholder.com/295x353"
   export let name = ""
-
-  let rand = Math.random()
 </script>
