@@ -2,6 +2,7 @@
 
 <script>
   import RecipeMiniCard from '../components/RecipeMiniCard.svelte';
+  import Qa from '../components/Qa.svelte';
   import RecipeCard from '../components/RecipeCard.svelte';
   import Grid from '../components/Grid.svelte';
 
@@ -16,10 +17,10 @@
 
 
 <Grid>
-  <div class="qa qa-recipe-mini-card">
-  <RecipeMiniCard recipe={recipe}></RecipeMiniCard>
-  </div>
-  <div class="qa qa-recipe-card">
-  <RecipeCard recipe={recipe}></RecipeCard>
-  </div>
+  <Qa name="RecipeMiniCard">
+    <RecipeMiniCard recipe={recipe}></RecipeMiniCard>
+  </Qa>
+  <Qa name="RecipeCard">
+    <RecipeCard recipe={recipe}></RecipeCard>
+  </Qa>
 </Grid>
