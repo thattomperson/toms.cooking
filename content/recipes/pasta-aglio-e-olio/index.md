@@ -1,7 +1,7 @@
 ---
 title: Pasta Aglio e Olio
 date: "2018-12-27"
-tags: [pasta, italian, simple, healthy, vegetarian]
+tags: [pasta, italian, simple, healthy, vegetarian, vegan]
 original: 
     host: Binging With Babish
     url: https://www.bingingwithbabish.com/recipes/2017/5/4/aglioeolio

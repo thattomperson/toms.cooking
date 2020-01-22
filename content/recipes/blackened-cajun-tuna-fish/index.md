@@ -1,11 +1,10 @@
 ---
 title: "Blackened Cajun Tuna Fish"
 date: 2020-01-22T16:09:16+11:00
-draft: true
-tags: []
+tags: [keto]
 original: 
-    host: Keto - 6 Ingredients or less
-    url: https://www.kmart.com.au/product/keto:-6-ingredients-or-less---book/2792820
+  host: Keto - 6 Ingredients or less
+  url: https://www.kmart.com.au/product/keto:-6-ingredients-or-less---book/2792820
 ingredients:
 - 4 x 150g tuna fillets
 - 3 cloves garlic, crushed
