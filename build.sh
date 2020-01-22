@@ -1,7 +1,7 @@
 set -xe
 
 
-HUGO_VERSION=v0.56.3
+HUGO_VERSION=v0.62.2
 CLONE_DIR=$(pwd)
 
 # Install wget
