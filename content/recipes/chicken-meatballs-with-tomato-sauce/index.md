@@ -19,8 +19,7 @@ ingredients:
 - 1 large egg, lightly beaten
 - 1/4 cup fresh parsley, finely chopped, for garnish
 method:
-- Add the tomatoes, roughly chopped onion, half of the garlic, olive oil, salt, pepper and tomato paste to the bowl of your slow cooker.
-Cover and cook the tomato sauce on high for 3 hours. Season to taste.
+- Add the tomatoes, roughly chopped onion, half of the garlic, olive oil, salt, pepper and tomato paste to the bowl of your slow cooker. Cover and cook the tomato sauce on high for 3 hours. Season to taste.
 - Meanwhile, to make the meatballs place the chicken mince, finely chopped onion, parmesan, remaining garlic, almond flour, egg, and a couple of grinds of salt and pepper in a large mixing bowl. Use your hands to thoroughly mix everything together. Shape the mixture into small meatballs and place in the refrigerator for at least 1 hour to chill.
 - One hour before serving, add the meatballs to the slow cooker. Greatly lower them into the sauce and spoon the sauce over the top. Cover and cook on high for 1 hour or until the meatballs are cooked through.
 - Serve hot, garnished with fresh herbs if desired
