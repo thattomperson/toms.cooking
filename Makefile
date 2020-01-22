@@ -1,4 +1,6 @@
 NAME ?= $(shell bash -c 'read -p "Name: " pwd; slugify $$pwd')
 
-new: 
-	hugo new recipes/$(NAME)/index.md
+new:
+	FILE="recipes/$(NAME)/index.md"; \
+	hugo new $$FILE; \
+	code content/$$FILE;
