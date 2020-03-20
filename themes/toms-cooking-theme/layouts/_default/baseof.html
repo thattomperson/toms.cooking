@@ -9,6 +9,21 @@
     {{- else -}}
     <title>{{ .Site.Title }} {{ .Page.Title }}</title>
     {{ end -}}
+    <link rel="manifest" href="/manifest.json">
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+              console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+              console.log('Service Worker Ready');
+          });
+      }
+  </script>
+  
 
     {{ if .Description }}
     <meta name="description" content="{{ .Description }}">
@@ -20,15 +35,6 @@
     <link rel="stylesheet"  href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ $style := resources.Get "scss/print.scss" | toCSS "css/print.css" | minify | fingerprint "sha512" }}
     <link rel="stylesheet" media="print" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-
-    {{ template "_internal/google_analytics_async.html" . }}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-7784427690889827",
-        enable_page_level_ads: true
-      });
-    </script>
 </head>
 <body class="is-preload">
     <div id="wrapper">
